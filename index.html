@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Secreto</title>
+    <link href="asset/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <main>
+    <header class="header">
+        <nav class="header__menu">
+            <img src="asset/Logo.png" alt="Alura">
+
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="entrada-texto">
+            <textarea id="input-text" placeholder="Ingrese el texto aquí"></textarea>
+            <div id="error-message" style="color: rgb(235, 228, 22); display: none; text-align:center;">
+                <p> Solo se permiten letras minúsculas sin acentos.</p>
+
+            </div>
+            <div class="button" style="grid-row: 2; display: flex; gap: 10px;">
+                <button id="encrypt-btn" onclick="encryptText()">Encriptar</button>
+                <button id="decrypt-btn" onclick="decryptText()">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <div id="placeholder" class="message-placeholder">
+                <img src="asset/Muñeco.png" alt="Placeholder">
+                <p>No se encontró ningún mensaje</p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div id="result-container" class="result">
+                <textarea id="output-text" readonly></textarea>
+                <button id="copy-btn" style="grid-row: 2; display: flex; gap: 10px;" onclick="copyText()">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Desarrollado por Jeimmy Ortiz</p>
+        <a class="presentacion__enlaces__link" href="https://github.com/jeimmy19/alura">
+            <img src="asset/github.png">
+        </a>
+        <a class="presentacion__enlaces__link" href="https://www.linkedin.com/in/jeimmyortiz/">
+            <img src="asset/linkedin.png">
+        </a>
+    </footer>
+</main>
+    <script src="app.js"></script>
+</body>
+</html>
